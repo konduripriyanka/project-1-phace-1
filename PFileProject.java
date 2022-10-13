@@ -8,6 +8,8 @@ public class PFileProject {
 public static void main(String[] args) throws IOException {
 		String path="C:\\Filesproject\\";
 		Scanner sc=new Scanner(System.in);
+		System.out.println("LOCKER PVT.LMT");
+		System.out.println("DEVELOPED BY PRIYANKA");
 		 while(true) {
 		System.out.println("u are performing operations on file");
 		
@@ -17,6 +19,7 @@ public static void main(String[] args) throws IOException {
 			 
 			 switch(ch) {
 			 case "1"://displaying
+				 String path1="C:\\Filesproject\\";
 				 File f1=new File(path);
 				 File fn1[]=f1.listFiles();
 				 for(File ff:fn1) {
@@ -24,12 +27,15 @@ public static void main(String[] args) throws IOException {
 				 }
 				break;
 			 case "2"://in menu we have sub operations in file
-				 System.out.println("2.1: adding\n2.2:deleting\n2.3:searching\n2.4:exit");
+				 boolean value=true;
+					while(value){	 
+				 System.out.println("sub menu for file operations\n2.1: adding\n2.2:deleting\n2.3:searching\n2.4:exit");
 				 System.out.println("enter ur choice");
 				 String ch1=sc.next();
 				
 				 switch(ch1) {
 				case "2.1"://adding
+					 String path3="C:\\Filesproject\\";
 					System.out.println("enter file name u want to add:"+path);
 					String fn2=sc.next();
 					File f2=new File(path+fn2);
@@ -42,6 +48,7 @@ public static void main(String[] args) throws IOException {
 					}
 					break;
 				case "2.2"://deleting
+					 String path4="C:\\Filesproject\\";
 					System.out.println("enter file name to dalete:"+path);
 					String fn3=sc.next();
 					File f3=new File(path+fn3);
@@ -54,6 +61,7 @@ public static void main(String[] args) throws IOException {
 					}
 					break;
 				case "2.3"://searching a file
+					 String path5="C:\\Filesproject\\";
 					System.out.println("enter file name u want to search");
 					String fn4=sc.next();
 					File f4=new File(path);
@@ -76,15 +84,17 @@ public static void main(String[] args) throws IOException {
 					}
 					break;
 				case "2.4":
-					System.exit(0);
+			
+					value=false;
 					break;
-				
+				 
 				default:
 				System.out.println("enter correct choice");
 				break;
 				}
+			 }
 			 break;
-			
+				 
 			case "3":
 				 System.exit(0);
 				 break;
